@@ -84,7 +84,7 @@ function SelectLocation() {
         <FormControl sx={{ minWidth: 300}}>
           <InputLabel id="Select Country">Select Country</InputLabel>
           <Select
-          native
+          
             labelId="Select-Country"
             value={selectedCountry}
             label="Select Country"
@@ -106,7 +106,7 @@ function SelectLocation() {
         <FormControl sx={{ minWidth: 200 }} disabled={!selectedCountry}>
           <InputLabel id="Select State">Select State</InputLabel>
           <Select
-          native
+          
             labelId="Select-State"
             value={selectedState}
             label="Select State"
@@ -127,7 +127,7 @@ function SelectLocation() {
         <FormControl sx={{ minWidth: 200 }} disabled={!selectedState}>
           <InputLabel id="Select City">Select City</InputLabel>
           <Select
-          native
+         
             labelId="Select city"
             value={selectedCity}
             label="Select City"
