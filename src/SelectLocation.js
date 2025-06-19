@@ -82,7 +82,7 @@ function SelectLocation() {
       >
         {/* Country Dropdown */}
         <FormControl sx={{ minWidth: 300}}>
-          <InputLabel id="Select Country">Country</InputLabel>
+          <InputLabel id="Select Country">Select Country</InputLabel>
           <Select
             labelId="Select-Country"
             value={selectedCountry}
@@ -103,7 +103,7 @@ function SelectLocation() {
 
         {/* State Dropdown */}
         <FormControl sx={{ minWidth: 200 }} disabled={!selectedCountry}>
-          <InputLabel id="Select State">State</InputLabel>
+          <InputLabel id="Select State">Select State</InputLabel>
           <Select
             labelId="Select-State"
             value={selectedState}
@@ -123,9 +123,9 @@ function SelectLocation() {
 
         {/* City Dropdown */}
         <FormControl sx={{ minWidth: 200 }} disabled={!selectedState}>
-          <InputLabel id="Select City">City</InputLabel>
+          <InputLabel id="Select City">Select City</InputLabel>
           <Select
-            labelId="select city"
+            labelId="Select city"
             value={selectedCity}
             label="Select City"
             onChange={(e) => setSelectedCity(e.target.value)}
