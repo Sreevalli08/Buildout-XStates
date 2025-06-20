@@ -1,5 +1,5 @@
     import React, { useState, useEffect } from "react";
-    import { Box,Typography,} from "@mui/material";
+    
     import axios from "axios";
 
     // defining state variables to store fetched data.
@@ -60,16 +60,16 @@
     }, [selectedState, selectedCountry]);
 
     return (
-        <Box sx={{ p: 4, textAlign: "center" }}>
-        <Typography variant="h3">
+        <div style={{ padding: "4px", textAlign: "center" }}>
+        <h1>
             Select Location
-        </Typography>
+        </h1>
 
-        <Box mt = {4} 
-            sx={{
+        <div style={{
+            marginTop: "4px",
             display: "flex",
             justifyContent: "center",
-            gap: 2,
+            gap: "8px",
             flexWrap: "wrap",
             }}
         >
@@ -129,16 +129,15 @@
                 </option>
                 ))}
             </select>
-          
-        </Box>
-
+          </div>
+        
         {/* Selected result */}
         {selectedCountry && selectedState && selectedCity && (
-            <Typography mt={4} sx={{fontSize: "25px"}}>
+            <p style = {{marginTop: "4px", fontSize: "25px"}}>
             You selected: {selectedCity}, {selectedState}, {selectedCountry}
-            </Typography>
+            </p>
         )}
-        </Box>
+       </div>
     );
     }
 
