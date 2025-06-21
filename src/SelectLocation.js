@@ -21,8 +21,10 @@
         axios
         .get(`https://crio-location-selector.onrender.com/countries`)
         .then((response) => setCountries(response.data)) // stores the response in state variable
-        .catch((error) => console.error("Error fetching Countries:", error));
-    }, []);
+        .catch((error) => {console.error("Error fetching Countries:", error);
+    setCountries([]); //only 1 option exists in the dropdown.
+});
+     }, []);
 
     // fetch States when Country is selected
 
@@ -134,7 +136,7 @@
         {/* Selected result */}
         {selectedCountry && selectedState && selectedCity && (
             <p style = {{marginTop: "4px", fontSize: "25px"}}>
-            You selected: {selectedCity}, {selectedState}, {selectedCountry}
+            You selected {selectedCity}, {selectedState}, {selectedCountry}
             </p>
         )}
        </div>
